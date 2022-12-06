@@ -3,12 +3,12 @@ public class Employee {
     private double salary;
     private static int count = 1;
     private final int id;
-    private String fullName;
+    private final String fullName;
     public Employee(String fullName, int department, double salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        id = count++;
+        this.id = count++;
     }
     public String getFullName() {
         return fullName;
@@ -21,9 +21,6 @@ public class Employee {
     }
     public int getId() {
         return id;
-    }
-    public static int getCount() {
-        return count;
     }
     public void setDepartment(int department) {
         this.department = department;
